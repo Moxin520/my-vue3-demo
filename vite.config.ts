@@ -27,6 +27,12 @@ export default (mode) =>
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },
+        "/api1": {
+          // 在配置文件中获取代理ip方法
+          target: "http://127.0.0.1:8888",
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ""),
+        },
       },
     },
     plugins: [
